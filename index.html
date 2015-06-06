@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--Copyright 2014 Matthew Lee Ferguson-->
+<!--Javascript μLecture Demonstrations by Matthew Lee Ferguson is distrubuted under terms of the GNU General Public License as published by the Free Software Foundation.
+Based on a work at http://physics.boisestate.edu/ferguson/.-->
+<html>
+  <head>
+    <title>Brownian Dynamics simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="smoothie.js"></script>
+    <script src= "ball.js"></script>
+    <script src= "graph.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="256" height="256"></canvas>
+    <canvas id="chart2" width="256" height="256"></canvas>
+    <script src= "brownian motions.js"></script>    
+    <canvas id="chart1" width="256" height="256"></canvas>
+    <script type="text/javascript">
+      var smoothie = new SmoothieChart({ grid: { strokeStyle: 'rgb(128, 0, 0)', fillStyle: 'rgb(64, 0, 0)', lineWidth: 1, millisPerLine: 250, verticalSections: 6 } });
+      smoothie.addTimeSeries(data1, { strokeStyle: 'rgb(0, 255, 0)', lineWidth: 3 });
+      smoothie.streamTo(document.getElementById("chart1"),500);
+    </script>
+    
+    <font color="grey">
+    <p>Copyright 2014 Matthew Lee Ferguson</p>
+    <p><a rel="license" href="http://www.gnu.org/licenses/"><img alt="GNU General Public License as published by
+    the Free Software Foundation" style="border-width:0" src="https://www.gnu.org/graphics/heckert_gnu.small.png" /></a><br />
+    <span xmlns:dct="https://www.gnu.org/licenses/gpl.html" property="dct:title">Javascript &#956Lecture Demonstrations</span> by <a xmlns:cc="https://www.gnu.org/licenses/" href="http://physics.boisestate.edu/ferguson/" property="cc:attributionName" rel="cc:attributionURL">Matthew Lee Ferguson</a> is distributed under terms of the <a rel="license" href="https://www.gnu.org/licenses/gpl.html">GNU General Public License as published by
+    the Free Software Foundation</a>.<br />
+    Based on a work at <a href="http://physics.boisestate.edu/ferguson/">http://physics.boisestate.edu/ferguson/</a>.<br /></font></p>
+
+  </body>
+</html>
